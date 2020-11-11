@@ -1,7 +1,9 @@
+import { AboutSection } from "./components/AboutSection"
+
 export const App = () => {
   return (
     <div>
-      <h1>Film</h1>
+      <AboutSection />
     </div>
   )
 }
