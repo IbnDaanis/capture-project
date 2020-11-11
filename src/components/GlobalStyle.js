@@ -6,12 +6,12 @@ export const GlobalStyle = createGlobalStyle`
       padding: 0;
       box-sizing: border-box;
     }
-
     body{
       background: #1b1b1b;
+      font-family: 'Roboto', sans-serif;
     }
-
     button{
+      font-family: 'Roboto', sans-serif;
       font-weight: bold;
       font-size: 1.1rem;
       cursor: pointer;
