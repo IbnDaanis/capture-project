@@ -4,7 +4,14 @@ import goodtimes from '../img/goodtimes-small.png'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { pageAnimation } from '../animation'
+import {
+  pageAnimation,
+  fade,
+  photoAnim,
+  lineAnim,
+  slider,
+  sliderContainer,
+} from '../animation'
 
 const Work = styled(motion.div)`
   min-height: 100vh;
@@ -17,8 +24,8 @@ const Work = styled(motion.div)`
 const Movie = styled.div`
   padding-bottom: 10rem;
   .line {
-    height: 0.2rem;
-    background: #ccc;
+    height: 0.3rem;
+    background: #23d997;
     margin-bottom: 3rem;
   }
   img {
@@ -27,8 +34,30 @@ const Movie = styled.div`
     object-fit: cover;
   }
   h2 {
-    color: white;
+    /* color: white; */
   }
+`
+const Hide = styled.div`
+  overflow: hidden;
+`
+
+const Frame1 = styled(motion.div)`
+  position: fixed;
+  left: 0;
+  top: 10%;
+  width: 100%;
+  height: 100vh;
+  background: #fffebf;
+  z-index: 3;
+`
+const Frame2 = styled(Frame1)`
+  background: #ff8efb;
+`
+const Frame3 = styled(Frame1)`
+  background: #8ed2ff;
+`
+const Frame4 = styled(Frame1)`
+  background: #8effa0;
 `
 
 export const OurWork = () => {
@@ -40,11 +69,19 @@ export const OurWork = () => {
       exit='exit'
       style={{ background: '#fff' }}
     >
+      <motion.div variants={sliderContainer} initial='hidden' animate='show'>
+        <Frame1 variants={slider}></Frame1>
+        <Frame2 variants={slider}></Frame2>
+        <Frame3 variants={slider}></Frame3>
+        <Frame4 variants={slider}></Frame4>
+      </motion.div>
       <Movie>
-        <h2>The Athlete</h2>
-        <div className='line'></div>
+        <motion.h2 variants={fade}>The Athlete</motion.h2>
+        <motion.div variants={lineAnim} div className='line'></motion.div>
         <Link to='/work/the-athlete'>
-          <img src={athlete} alt='The Athlete' />
+          <Hide>
+            <motion.img variants={photoAnim} src={athlete} alt='The Athlete' />
+          </Hide>
         </Link>
       </Movie>
       <Movie>
