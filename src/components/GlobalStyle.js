@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     body{
       background: #1b1b1b;
       font-family: 'Roboto', sans-serif;
+      overflow-x: hidden;
     }
     button{
       font-family: 'Roboto', sans-serif;
