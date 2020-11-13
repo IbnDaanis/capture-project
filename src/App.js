@@ -6,6 +6,7 @@ import { ContactUs } from './pages/ContactUs'
 import { OurWork } from './pages/OurWork'
 import { MovieDetails } from './pages/MovieDetails'
 import { AnimatePresence } from 'framer-motion'
+import { ScrollTop } from './components/ScrollTop'
 
 export const App = () => {
   const location = useLocation()
@@ -28,6 +29,7 @@ export const App = () => {
             <ContactUs />
           </Route>
         </Switch>
+        <ScrollTop />
       </AnimatePresence>
     </div>
   )

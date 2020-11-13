@@ -14,6 +14,7 @@ import {
   scrollReveal,
 } from '../animation'
 import { useScroll } from '../components/useScroll'
+import { ScrollTop } from '../components/ScrollTop'
 const Work = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
