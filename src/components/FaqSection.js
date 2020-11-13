@@ -1,5 +1,7 @@
+import { useState } from 'react'
 import styled from 'styled-components'
 import { About } from '../styles'
+import { Toggle } from './Toggle'
 
 const Faq = styled(About)`
   display: block;
@@ -35,16 +37,20 @@ export const FaqSection = () => {
         Any Questions? <span>FAQ</span>
       </h2>
       {/* Question 1 */}
-      <div className='question'>
-        <h4>How Do I start?</h4>
-        <div className='answer'>
-          <p>Lorem ipsum dolor sit amet.</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, nam!
-          </p>
+      <Toggle>
+        <div className='question'>
+          <h4>How Do I start?</h4>
+          <div className='answer'>
+            <p>Lorem ipsum dolor sit amet.</p>
+
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo,
+              nam!
+            </p>
+          </div>
+          <div className='faq-line'></div>
         </div>
-        <div className='faq-line'></div>
-      </div>
+      </Toggle>
       {/* Question 2 */}
       <div className='question'>
         <h4>Daily Schedule</h4>
