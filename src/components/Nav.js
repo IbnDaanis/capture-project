@@ -30,6 +30,21 @@ const StyledNav = styled.nav`
     font-family: 'Lobster', cursive;
     font-weight: lighter;
   }
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    h1 {
+      padding: 2rem;
+    }
+    ul {
+      padding: 2rem;
+      justify-content: space-around;
+      width: 100%;
+      li {
+        padding: 1rem;
+      }
+    }
+  }
 `
 
 export const Nav = () => {
@@ -42,13 +57,13 @@ export const Nav = () => {
       </h1>
       <ul>
         <li>
-          <Link to='/'>1. About Us</Link>
+          <Link to='/'>About Us</Link>
         </li>
         <li>
-          <Link to='/work'>2. Our Work</Link>
+          <Link to='/work'>Our Work</Link>
         </li>
         <li>
-          <Link to='/contact'>3. Contact Us</Link>
+          <Link to='/contact'>Contact Us</Link>
         </li>
       </ul>
     </StyledNav>

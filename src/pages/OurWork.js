@@ -14,13 +14,15 @@ import {
   scrollReveal,
 } from '../animation'
 import { useScroll } from '../components/useScroll'
-import { ScrollTop } from '../components/ScrollTop'
 const Work = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 10rem;
   h2 {
     padding: 1rem 0;
+  }
+  @media (max-width: 1200px) {
+    padding: 3rem 2rem;
   }
 `
 const Movie = styled(motion.div)`

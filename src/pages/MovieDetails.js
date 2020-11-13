@@ -23,6 +23,12 @@ const Headline = styled.div`
     height: 70vh;
     object-fit: cover;
   }
+  @media (max-width: 1200px) {
+    h2 {
+      left: 40%;
+      transform: translate(-50%, -50%);
+    }
+  }
 `
 const Awards = styled.div`
   min-height: 80vh;
@@ -31,6 +37,9 @@ const Awards = styled.div`
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
+  @media (max-width: 1200px) {
+    margin: 2rem 3rem;
+  }
 `
 const AwardStyle = styled.div`
   padding: 2rem;
